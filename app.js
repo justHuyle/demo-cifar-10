@@ -54,7 +54,7 @@
             // Setup ORT to use WASM backend
             ort.env.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/';
             
-            model = await ort.InferenceSession.create('../models/mnist_improved_cnn.onnx');
+            model = await ort.InferenceSession.create('./models/mnist_improved_cnn.onnx');
             updateStatus('Sẵn sàng!', 'ready');
             btnPredict.disabled = false;
         } catch (e) {
